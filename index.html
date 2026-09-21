@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpMe!</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="images/">
+    <link rel="stylesheet" href="sounds/">
+
+</head>
+<body>
+    <!--顶部导航栏-->
+    <nav>
+        <h1>LhhMissing</h1>
+        <div class="menu">
+            <ul>
+                <li><a href="#q1" class="nav-link">1</a></li>
+                <li><a href="#q2" class="nav-link">2</a></li>
+                <li><a href="#q3" class="nav-link">3</a></li>
+                <li><a href="#q4" class="nav-link">4</a></li>
+                <li><a href="#q5" class="nav-link">5</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="buju" id="buju" style="margin-top: 80px;">
+        <section class="story" id="q0" >
+            <div class="title">今天早上...</div>
+            <img src="images/story.jpg" alt="" style="width: 60%; display: flex; margin: 0 auto;padding: 10px 0px 40px 0px;">
+        </section>
+
+        <div class="renwu">
+            <h4>所以你要做什么</h4>
+            <p>解开下面的谜题，交出坏蛋需要的东西</p>
+            <p>拯救乐呵呵！</p>
+            <p style="color: rgba(240, 248, 255, 0);">*</p>
+            <p style="color: rgba(240, 248, 255, 0);">*</p>
+            <h4>乐呵呵的购物清单</h4>
+            <p>牛奶、椰奶</p>
+            <p>油、盐</p>
+            <p>面粉、糖</p>
+            <p>鸡蛋</p>
+            <p>吉利丁</p>
+            <p>淡奶油</p>
+            <p>巧克力</p>
+            <p>锡纸</p>
+            <p style="color: rgba(240, 248, 255, 0);">*</p>
+            <p style="font-size: smaller;color: gray;">*和谜题没关系，补充剧情用</p>
+        </div>
+    </div>
+
+    <!--谜题板块-->
+    <main class="content">
+        <article>
+            <section class="ques" id="q1">
+                <div class="title">来玩翻翻乐</div>
+                <div class="game-board" id="board"></div>
+            </section>
+
+            <section class="ques" id="q2">
+                <div class="title">那张没有按时出发的车票</div>
+    
+                <input type="text" id="passwordInput1" placeholder="输入密码" style="font-weight: bold;">
+                <p id="errorMsg1" style="color: red; display: none; padding: 5px 0px 10px 50px;">区分大小写的哦 </p>
+                <button class="okBtn" id="checkBtn1">确认</button>  
+            </section>
+
+            <section class="ques" id="q3">
+                <div class="title">图片的顺序好像有点问题。</div>
+                <input type="text" id="passwordInput3" placeholder="输入密码" style="font-weight: bold;">
+                <p id="errorMsg3" style="color: red; display: none; padding: 5px 0px 10px 50px;">这么说是有点摸不着头脑，去微信点开乐呵呵的头像试试看？ </p>  
+                <button class="okBtn" id="checkBtn3">确认</button>
+            </section>
+
+            <section class="ques" id="q4">
+                <div class="title">乐呵呵严肃上课中</div>
+                <h3 style="margin: 10px 0px 5px 50px; color: rgb(98, 97, 97);">软件设计与体系架构</h3>
+                <div class="ti">
+                    <input type="text" id="passwordInput4a1" placeholder="输入时间，如12:00" style="font-weight: bold;">
+                    <h3 style="color: rgb(98, 97, 97); padding-left: 5%;">-</h3>
+                    <input type="text" id="passwordInput4a2" placeholder="输入时间，如12:00" style="font-weight: bold;">
+                </div>
+                <p id="errorMsg4a1" style="color: red; display: none; padding: 0px 0px 10px 50px;">这里有问题哦 </p>
+                <h3 style="margin: 0px 0px 5px 50px; color: rgb(98, 97, 97);">艺术导论</h3>
+                <div class="ti">
+                    <input type="text" id="passwordInput4a3" placeholder="输入时间，如12:00" style="font-weight: bold;">
+                    <h3 style="color: rgb(98, 97, 97); padding-left: 5%;">-</h3>
+                    <input type="text" id="passwordInput4a4" placeholder="输入时间，如12:00" style="font-weight: bold;">
+                </div>
+                <p id="errorMsg4a2" style="color: red; display: none; padding: 0px 0px 10px 50px;">这里有问题哦 </p>
+                <button class="okBtn" id="checkBtn4">确认</button>
+                
+            </section>
+
+            <section class="ques" id="q5">
+                <div class="title">睡觉时间！</div>
+                <img src="images/tomb.png" alt="" class="ti-img">
+                <div class="ti">
+                    <h3>这是谁的墓碑？</h3>
+                    <input type="text" id="passwordInput5a1" placeholder="输入答案(英文)" style="font-weight: bold;">
+                </div>
+                <p id="errorMsg5a1" style="color: red; display: none; padding: 0px 0px 10px 50px;">这里有问题哦,看看我们的聊天记录？ </p>
+                <div class="ti">
+                    <h3>上面写着什么？</h3>
+                    <input type="text" id="passwordInput5a2" placeholder="输入答案(英文)" style="font-weight: bold;">
+                </div>
+                <p id="errorMsg5a2" style="color: red; display: none; padding: 0px 0px 10px 50px;">这里有问题哦,可以用浏览器搜索一下 </p>
+                <button class="okBtn" id="checkBtn5">确认</button>
+            </section>
+        </article>
+
+        <aside>
+            <div class="title">线索栏</div>
+            <div id="clue2" class="clue" style="display: none;">
+                <img src="images/clue1.jpg" alt="" class="clue-img">
+            </div>
+            <div id="clue1" class="clue" style="display: none;">
+                <img src="images/clue2.jpg" alt="" class="clue-img">
+            </div>
+            <div id="clue3" class="clue" style="display: none;">
+                <img src="images/clue3.jpg" alt="" class="clue-img">
+            </div>
+            <div id="clue4" class="clue" style="display: none;">
+                <img src="images/clue4.jpg" alt="" class="clue-img">
+            </div>
+            <div id="clue5" class="clue" style="display: none;">
+                <img src="images/clue5.jpg" alt="" class="clue-img">
+            </div>
+            <p style="margin-left: 5%; color: whitesmoke;">*也许不用所有的线索就可以解出最终答案…</p>
+            <p style="margin-left: 5%; color: whitesmoke">*要是没有思路可以点一下确定按钮</p>
+        </aside>
+      
+    </main>
+
+    <!--最终效果演出板块-->
+    <div class="ques1" id="q6">
+        <div class="title">所以最终答案是...?</div>
+        <p style="margin-left: 4%; color: gray;">这个琴是有声音的嘿嘿</p>
+        <div class="piano">
+            <div class="white-keys">
+                <div class="white-key" data-note="c1">c1</div>
+                <div class="white-key" data-note="d1">d1</div>
+                <div class="white-key" data-note="e1">e1</div>
+                <div class="white-key" data-note="f1">f1</div>
+                <div class="white-key" data-note="g1">g1</div>
+                <div class="white-key" data-note="a1">a1</div>
+                <div class="white-key" data-note="b1">b1</div>
+                <div class="white-key" data-note="c2">c2</div>
+                <div class="white-key" data-note="d2">d2</div>
+                <div class="white-key" data-note="e2">e2</div>
+            </div>
+            <div class="black-keys">
+                <div class="black-key"></div>
+                <div class="black-key"></div>
+                <div class="black-key"></div>
+                <div class="black-key"></div>
+                <div class="black-key"></div>
+                <div class="black-key"></div>
+                <div class="black-key"></div>
+            </div>
+        </div>
+        <div class="sequence-panel">
+            <span class="sequence-label">输入:</span>
+            <div class="slots" id="slots"></div>
+            <span class="status" id="status"></span>
+        </div>
+        <div>
+            <img src="images/key.png" alt="" id="keyImg" style="display: none;">
+        </div>
+    </div>
+
+    <div id="a1" style="display: none;">
+        <div id="effectArea" class="effect-area">
+            <img src="images/cake.png" alt="" id="imgA" class="effect-img">
+            <img src="images/sing.png" alt="" id="imgB" class="effect-img">
+        </div>
+        <div class="final" id="final">
+            <p class="answer">可以给乐呵呵发送“别忘了送走昨天，也别忘了向明天致敬。”</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
