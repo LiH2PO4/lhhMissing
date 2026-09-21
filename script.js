@@ -176,7 +176,7 @@ document.getElementById("checkBtn3").addEventListener("click", function () {
         const MAX_LENGTH = 6;
         const CORRECT_ANSWER = ['g1','g1','a1','g1','c2','b1'];
         const audioMap = {
-        'c1': './sounds/do.mp3',   // 预留: 填入你的mp3地址，例如 './sounds/C4.mp3'
+        'c1': './sounds/do.mp3',   
         'd1': './sounds/re.mp3',
         'e1': './sounds/mi.mp3',
         'f1': './sounds/fa.mp3',
@@ -259,7 +259,6 @@ document.getElementById("checkBtn3").addEventListener("click", function () {
             statusEl.className = 'status';
         }
 
-            // 暴露清空方法到全局
         window.clearSequence = clearSequence;
 
         // 白键点击事件
@@ -282,11 +281,9 @@ document.getElementById("checkBtn3").addEventListener("click", function () {
                     player.play().catch(err => console.warn(`播放 ${note} 失败:`, err));
                 }
 
-                // 视觉反馈
                 this.classList.add('active');
                 setTimeout(() => this.classList.remove('active'), 100);
 
-                // 刷新显示
                 render();
 
                 // 到达6位时判断
@@ -298,7 +295,7 @@ document.getElementById("checkBtn3").addEventListener("click", function () {
                         console.log('✗ 答案错误，即将清空:', [...userSequence]);
                         // 标记错误动画
                         slotEls.forEach(el => el.classList.add('error'));
-                        // 延迟清空，让用户看到错误状态
+                        // 延迟清空
                         setTimeout(() => {
                             clearSequence();
                         }, 800);
@@ -307,7 +304,6 @@ document.getElementById("checkBtn3").addEventListener("click", function () {
             });
         });
 
-            // 初始化渲染
         render();
         console.log('钢琴已就绪。 序列上限:', MAX_LENGTH, ' 正确答案:', CORRECT_ANSWER);
 
@@ -332,17 +328,14 @@ document.getElementById("checkBtn3").addEventListener("click", function () {
             document.body.style.backgroundImage = 'none';
             document.getElementById("a1").style.display = "block";
 
-            // 1. 显示区域
+            // 显示区域
             imgA.classList.add('show');
     
-            // 3. 静止 2 秒后：播音乐 + 摇摆
             setTimeout(() => {
-                // 播音乐（替换成你的音频路径）
                 const audio = new Audio('sounds/toyou.mp3');
                 audio.volume = 0.6;
                 audio.play().catch(err => console.warn('播放失败:', err));
 
-                // 4. 摇摆一段时间后（比如 4 秒），图片A 消失
                 setTimeout(() => {
                 imgA.classList.add('hide');
 
@@ -352,10 +345,10 @@ document.getElementById("checkBtn3").addEventListener("click", function () {
                         setTimeout(() => {
                         document.getElementById("final").style.display = "block";
                         }, 8000);
-                    }, 800);   // ← 这个值要 ≥ imgA 淡出动画的时长
+                    }, 800);
                 }, 14000);
 
-            }, 1000);      // ← 静止 2 秒
+            }, 1000);      // ← 静止
 
         });
     })();

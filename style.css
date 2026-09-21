@@ -367,7 +367,6 @@ button:disabled {
     display: flex;
     gap: 0;
     width: 0;
-    /* 由子元素绝对定位撑开 */
 }
 
 .black-key {
@@ -472,9 +471,9 @@ button:disabled {
  .hidden { display: none; }
 
   .effect-area {
-    position: relative;         /* 让两张图片叠在同一位置 */
+    position: relative;
     margin-top: 24px;
-    width: 50vw;               /* 按需调整 */
+    width: 50vw; 
     height: 50vw;
     display: flex;
     align-items: center;
@@ -487,7 +486,7 @@ button:disabled {
     position: absolute;
     max-width: 80%;
     max-height: 80%;
-    opacity: 0;                 /* 默认隐藏，靠 JS 控制 */
+    opacity: 0; 
     pointer-events: none;
   }
 
